@@ -2,9 +2,10 @@
   "name": "tnm-3dep-downloader",
   "version": "0.0.1",
   "description": "Downloads 3DEP elevation GeoTIFF products from The National Map",
-  "main": "index.js",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
+    "build": "./node_modules/typescript/bin/tsc",
     "start": "ts-node-esm ./src/index.ts"
   },
   "author": "Taylor Callsen",
@@ -17,5 +18,8 @@
   },
   "dependencies": {
     "node-fetch": "^3.3.1"
+  },
+  "engines": {
+      "node": ">=18.0.0"
   }
 }
