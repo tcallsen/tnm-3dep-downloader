@@ -6,7 +6,6 @@
     "outDir": "dist"
   },
   "ts-node": {
-    "esm": true,
     "experimentalSpecifierResolution": "node"
   },
   "moduleResolution":"node",
