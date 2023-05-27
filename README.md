@@ -17,10 +17,10 @@ nvm use
 npm install
 ```
 
-### Build / Execute
+### Build
 
 ```
-npm start
+npm run build
 ```
 
 ### Test
