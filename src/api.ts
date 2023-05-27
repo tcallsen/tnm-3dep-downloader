@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 const TNM_API_BASE_URL = 'https://tnmaccess.nationalmap.gov';
 
