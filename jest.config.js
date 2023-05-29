@@ -1,20 +1,14 @@
+const esModules = ['quick-lru'].join('|');
+
 module.exports = {
   moduleFileExtensions: [
       "ts",
       "js"
   ],
   extensionsToTreatAsEsm: ['.ts'],
-  transform: {
-      "^.+\\.(ts|tsx)$": [
-        "ts-jest",
-        {
-          tsconfig: "tsconfig.json",
-          useESM: true
-        }
-      ]
-  },
   testMatch: [
       "**/test/**/*.test.(ts|js)"
   ],
-  testEnvironment: "node"
+  testEnvironment: "node",
+  transformIgnorePatterns : [`/node_modules/(?!${esModules})`]
 };
