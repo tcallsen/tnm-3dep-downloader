@@ -47,8 +47,10 @@ export interface ProductBoundingBox {
   minX: number,
   maxX: number,
   minY: number,
-  maxYs: number
+  maxY: number
 }
+
+export type ResolutionStrategy = (products: Product[]) => Product;
 
 // TODO: adjust method to accept bounding box instead of polygon
 export async function getProducts(polygon: string): Promise<Product[]> {
@@ -60,19 +62,27 @@ export async function getProducts(polygon: string): Promise<Product[]> {
   // API does not expect polygon param's commas to be URL encoded (which occurs when using searchParams)
   const finalSearchUrl = `${searchUrl.href}&polygon=${polygon}`;
 
-  const response = await fetch(finalSearchUrl);
+  const response = await fetch(finalSearchUrl, {});
 
   if (response.ok) {
-    const responseJson = await response.json();
-    if (responseJson.items) {
-      return responseJson.items as Product[];
+    try {
+      const responseJson = await response.json();
+      if (responseJson.items) {
+        return responseJson.items as Product[];
+      }
+    } catch (ex) {
+      console.error(`error retrieving product JSON: ${ex}`);
     }
   }
   return [];
 }
 
-// export async function filterProducts(products: Product[]) {
-//   products.forEach(product => {
-    
-//   });
-// }
+export function filterProducts(products: Product[], resolutionStrategy: ResolutionStrategy = defaultResolutionStrategy): Product {
+  return resolutionStrategy(products);
+}
+
+const defaultResolutionStrategy: ResolutionStrategy = function(products: Product[]) {
+  return products.reduce(function(prev, current) {
+    return (prev.sizeInBytes > current.sizeInBytes) ? prev : current;
+  });
+};
