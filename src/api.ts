@@ -6,13 +6,52 @@ export interface productsResponse {
   total: number,
   sciencebaseQuery: string,
   filteredOut: number,
-  items: any[],
+  items: Product[],
   errors: any[],
   messagess: string[],
 }
 
+export interface Product {
+  title:             string;
+  moreInfo:          string;
+  sourceId:          string;
+  sourceName:        string;
+  sourceOriginId:    null;
+  sourceOriginName:  string;
+  metaUrl:           string;
+  vendorMetaUrl:     string;
+  publicationDate:   Date;
+  lastUpdated:       Date;
+  dateCreated:       Date;
+  sizeInBytes:       number;
+  extent:            string;
+  format:            string;
+  downloadURL:       string;
+  downloadURLRaster: null;
+  previewGraphicURL: string;
+  downloadLazURL:    null;
+  urls:              ProductUrls;
+  datasets:          any[];
+  boundingBox:       ProductBoundingBox;
+  bestFitIndex:      number;
+  body:              string;
+  processingUrl:     string;
+  modificationInfo:  Date;
+}
+
+export interface ProductUrls {
+  TIFF: string;
+}
+
+export interface ProductBoundingBox {
+  minX: number,
+  maxX: number,
+  minY: number,
+  maxYs: number
+}
+
 // TODO: adjust method to accept bounding box instead of polygon
-export async function getProducts(polygon: string): Promise<productsResponse> {
+export async function getProducts(polygon: string): Promise<Product[]> {
   const searchUrl = new URL('/api/v1/products', TNM_API_BASE_URL);
   searchUrl.searchParams.append('prodFormats', 'GeoTIFF');
   searchUrl.searchParams.append('datasets', 'Digital Elevation Model (DEM) 1 meter,National Elevation Dataset (NED) 1/3 arc-second,National Elevation Dataset (NED) 1/9 arc-second');
@@ -25,11 +64,15 @@ export async function getProducts(polygon: string): Promise<productsResponse> {
 
   if (response.ok) {
     const responseJson = await response.json();
-    return responseJson as productsResponse;
+    if (responseJson.items) {
+      return responseJson.items as Product[];
+    }
   }
-  return '[]';
+  return [];
 }
 
-// export async function filterProducts(products) {
-  
+// export async function filterProducts(products: Product[]) {
+//   products.forEach(product => {
+    
+//   });
 // }
