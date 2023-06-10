@@ -11,7 +11,10 @@
       "runtimeArgs": ["--inspect-brk", "${workspaceRoot}/node_modules/.bin/jest", "--runInBand", "--coverage", "false"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "enableContentValidation": false
+      "enableContentValidation": false,
+      "env" : {
+        "NODE_OPTIONS": "--max-old-space-size=8192"
+      }
     }
   ]
 }

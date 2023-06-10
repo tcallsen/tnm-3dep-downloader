@@ -1,9 +1,18 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 const TNM_API_BASE_URL = 'https://tnmaccess.nationalmap.gov';
 
+export interface productsResponse {
+  total: number,
+  sciencebaseQuery: string,
+  filteredOut: number,
+  items: any[],
+  errors: any[],
+  messagess: string[],
+}
+
 // TODO: adjust method to accept bounding box instead of polygon
-export async function getProducts(polygon: string) {
+export async function getProducts(polygon: string): Promise<productsResponse> {
   const searchUrl = new URL('/api/v1/products', TNM_API_BASE_URL);
   searchUrl.searchParams.append('prodFormats', 'GeoTIFF');
   searchUrl.searchParams.append('datasets', 'Digital Elevation Model (DEM) 1 meter,National Elevation Dataset (NED) 1/3 arc-second,National Elevation Dataset (NED) 1/9 arc-second');
@@ -15,7 +24,12 @@ export async function getProducts(polygon: string) {
   const response = await fetch(finalSearchUrl);
 
   if (response.ok) {
-    return response.json();
+    const responseJson = await response.json();
+    return responseJson as productsResponse;
   }
-  return '[]'
+  return '[]';
 }
+
+// export async function filterProducts(products) {
+  
+// }
