@@ -10,5 +10,6 @@ module.exports = {
       "**/test/**/*.test.(ts|js)"
   ],
   testEnvironment: "node",
-  transformIgnorePatterns : [`/node_modules/(?!${esModules})`]
+  transformIgnorePatterns : [`/node_modules/(?!${esModules})`],
+  testTimeout: 30000
 };

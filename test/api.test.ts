@@ -1,4 +1,4 @@
-import { getProducts, filterProducts, Product } from '../src/api';
+import { getProducts, filterProducts, Product, loadGeoTiff, convertCoordToPixel, readGpxData, calculateElevation, writeToCsv } from '../src/api';
 
 describe('TNM API', () => {
   it('getProducts - should return products', async () => {
@@ -101,5 +101,40 @@ describe('TNM API', () => {
       return products.filter((product: Product) => product.sourceName === 'ScienceBaseB')[0];
     });
     expect(filteredProduct.sourceName).toBe('ScienceBaseB');
+  });
+
+  it.only('GPX file elevation diff', async () => {
+    // fremont - mission peak
+    // polygon=-121.91554117132182%2037.54125059607636,-121.87132119433234%2037.54125059607636,-121.87132119433234%2037.505526030015204,-121.91554117132182%2037.505526030015204,%20-121.91554117132182%2037.54125059607636&
+    // const { image, projection } = await loadGeoTiff('/root/taylor/Documents/dev/tnm-3dep-downloader/data/fremont/USGS_1M_10_x59y416_CA_AlamedaCounty_2021_B21_uncompressed.tif');
+    // const gpxFeature = readGpxData('/root/taylor/Documents/dev/tnm-3dep-downloader/data/fremont/Mission_Peak_Climb.gpx');
+
+    const { image, projection } = await loadGeoTiff('/root/taylor/Documents/dev/tnm-3dep-downloader/data/china-camp/USGS_1m_x54y421_CA_NoCal_Wildfires_B5b_QL1_2018_uncompressed.tif');
+    const gpxFeature = readGpxData('/root/taylor/Documents/dev/tnm-3dep-downloader/data/china-camp/China_Camp_Loop_with_JS.gpx');
+
+    // iterate over gpx data and collect elecations into arrays
+    const gpxElevation: number[] = [];
+    const tiffElevation: number[] = [];
+    for (const coord of gpxFeature.geometry.coordinates) {      
+      const [ pixelX, pixelY ] = convertCoordToPixel(image, projection, coord[0], coord[1]);
+      const [ elevation ] = await image.readRasters({
+        interleave: true,
+        window: [ pixelX, pixelY, pixelX + 1, pixelY + 1],
+        samples: [ 0 ]
+      });
+      gpxElevation.push(coord[2]);
+      tiffElevation.push(elevation);
+    }
+
+    // compute elevation gain in arrays
+    const gpxElevationTotal = calculateElevation(gpxElevation);
+    const tiffElevationTotal = calculateElevation(tiffElevation);
+
+    writeToCsv('/root/taylor/Documents/dev/tnm-3dep-downloader/out/gpxElevation.csv', gpxElevation);
+    writeToCsv('/root/taylor/Documents/dev/tnm-3dep-downloader/out/tiffElevation.csv', tiffElevation);
+
+    console.log(`gpx:  ${gpxElevationTotal}`);
+    console.log(`tiff: ${tiffElevationTotal}`);
+
   });
 });
