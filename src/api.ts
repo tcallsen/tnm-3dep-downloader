@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import { getWKTBBox, BBox } from 'bbox-helper-functions';
 
 const TNM_API_BASE_URL = 'https://tnmaccess.nationalmap.gov';
 
@@ -52,8 +53,9 @@ export interface ProductBoundingBox {
 
 export type ResolutionStrategy = (products: Product[]) => Product;
 
-// TODO: adjust method to accept bounding box instead of polygon
-export async function getProducts(polygon: string): Promise<Product[]> {
+export async function getProducts(wktPolygon: string): Promise<Product[]> {
+  const polygon = convertWktToApiFormat(wktPolygon);
+
   const searchUrl = new URL('/api/v1/products', TNM_API_BASE_URL);
   searchUrl.searchParams.append('prodFormats', 'GeoTIFF');
   searchUrl.searchParams.append('datasets', 'Digital Elevation Model (DEM) 1 meter,National Elevation Dataset (NED) 1/3 arc-second,National Elevation Dataset (NED) 1/9 arc-second');
@@ -79,6 +81,10 @@ export async function getProducts(polygon: string): Promise<Product[]> {
 
 export function filterProducts(products: Product[], resolutionStrategy: ResolutionStrategy = defaultResolutionStrategy): Product {
   return resolutionStrategy(products);
+}
+
+function convertWktToApiFormat(wktPolygon: string): string {
+  return wktPolygon.replace('POLYGON', '').replace(/\(/g, '').replace(/\)/g, '');
 }
 
 const defaultResolutionStrategy: ResolutionStrategy = function(products: Product[]) {
