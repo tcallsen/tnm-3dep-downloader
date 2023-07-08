@@ -12,8 +12,6 @@ pids
 logs
 results
 tmp
-data
-out
 
 # Build
 public/css/main.css
@@ -41,3 +39,8 @@ dist/**/*
 
 # ignore yarn.lock
 yarn.lock
+
+# tests
+## ignore tiff file (should be downloaded from s3)
+test/resources/tiff/*
+test/out
