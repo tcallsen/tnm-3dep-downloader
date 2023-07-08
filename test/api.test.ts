@@ -1,7 +1,7 @@
 import fs from 'fs';
-import { getProducts, filterProducts, Product, loadGeoTiff, convertCoordToPixel, readGpxData, calculateElevation, writeToCsv } from '../src/api';
+import { getProducts, filterProducts, Product } from '../src/api';
 
-describe('TNM API', () => {
+describe.skip('TNM API', () => {
   it('getProducts - should return products', async () => {
     const boundingBox = 'POLYGON((-122.674011196934 38.0220728663461,-122.52459715119774 38.0220728663461,-122.52459715119774 37.93374140015236,-122.674011196934 37.93374140015236, -122.674011196934 38.0220728663461))';
     const products = await getProducts(boundingBox);

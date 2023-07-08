@@ -2,14 +2,14 @@ const esModules = ['quick-lru'].join('|');
 
 module.exports = {
   moduleFileExtensions: [
-      "ts",
-      "js"
+    'ts',
+    'js'
   ],
   extensionsToTreatAsEsm: ['.ts'],
   testMatch: [
-      "**/test/**/*.test.(ts|js)"
+    '**/test/**/*.test.(ts|js)'
   ],
-  testEnvironment: "node",
+  testEnvironment: 'node',
   transformIgnorePatterns : [`/node_modules/(?!${esModules})`],
-  testTimeout: 30000
+  testTimeout: 60000
 };

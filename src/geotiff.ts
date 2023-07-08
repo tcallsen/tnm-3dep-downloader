@@ -10,6 +10,8 @@ export async function loadGeoTiffData(path: string): Promise<any> {
   const projObj = geokeysToProj4.toProj4( geoKeys );
   const projection = proj4( 'WGS84', projObj.proj4 );
 
+  // TODO: add logic to decompress tiff if compression detected - HUGE performance increase
+
   return {
     image,
     projection
