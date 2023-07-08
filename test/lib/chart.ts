@@ -1,9 +1,9 @@
 import { ChartJSNodeCanvas } from 'chartjs-node-canvas';
 import fs from 'fs';
 
-const width = 4096; //px
-const height = 1024; //px
-const backgroundColour = 'white'; // Uses https://www.w3schools.com/tags/canvas_fillstyle.asp
+const width = 4096;
+const height = 1024;
+const backgroundColour = 'white';
 const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height, backgroundColour});
 
 async function getChartDataUrl (inputDataArray, dataLabels?) {
@@ -28,7 +28,10 @@ async function getChartDataUrl (inputDataArray, dataLabels?) {
     data: data,
   };
 
-  const dataUrl = await chartJSNodeCanvas.renderToDataURL(config); // converts chart to image
+  // 3rd level meta comment to allow other comments
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const dataUrl = await chartJSNodeCanvas.renderToDataURL(config);
   return dataUrl;
 }
 

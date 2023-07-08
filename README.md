@@ -18,9 +18,7 @@ Some stretch goals for #3 may include things like:
 
 ## TNM API Spec
 
-This module is coded to follow the National Map API spec [documented here](https://apps.nationalmap.gov/help/documents/TNMAccessAPIDocumentation/TNMAccessAPIDocumentation.pdf). 
-
-Currently this module only searches for 1 meter DEM products avilable for [most areas in the United States](https://index.nationalmap.gov/arcgis/rest/services/3DEPElevationIndex/MapServer/export?bbox=-15457537.49599047%2C2730261.224595605%2C-5693165.75473151%2C6428590.40114459&bboxSR=102100&imageSR=102100&size=1497%2C567&dpi=144&format=png32&transparent=true&layers=show%3A1&f=image), but this can easily be modified in the [query sent to TNM](https://github.com/tcallsen/tnm-3dep-downloader/blob/main/src/api.ts#L60).
+This module queries the National Map following their published API spec [documented here](https://apps.nationalmap.gov/help/documents/TNMAccessAPIDocumentation/TNMAccessAPIDocumentation.pdf).
 
 ## Development
 

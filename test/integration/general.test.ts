@@ -3,11 +3,17 @@ import { loadGpxData } from '../../src/gpx';
 import { calculateElevation } from '../../src/lib/utils';
 import { writeImageFile } from '../lib/chart';
 
-describe.only('Integration tests', () => {
+describe.only('integration tests', () => {
 
-  it('Calculate elevation from GPX file using tiff elevation data', async () => {
-    const { image, projection } = await loadGeoTiffData('./test/resources/tiff/USGS_1M_10_x58y527_WA_KingCounty_2021_B21-UNCOMPRESSED.tif');
-    const gpxFeature = loadGpxData('./test/resources/gpx/Raging_River_mtb_july_2023.gpx');
+  it.only('calculate elevation from GPX file using tiff elevation data', async () => {
+
+    // Raging River - east Seattle
+    // const { image, projection } = await loadGeoTiffData('./test/resources/tiff/USGS_1M_10_x58y527_WA_KingCounty_2021_B21-UNCOMPRESSED.tif');
+    // const gpxFeature = loadGpxData('./test/resources/gpx/Raging_River_mtb_july_2023-gpsvisualizer.com_dem_applied.gpx');
+
+    // Alhambra Valley - east bay
+    const { image, projection } = await loadGeoTiffData('./test/resources/tiff/USGS_1m_x57y421_CA_NoCAL_Wildfires_B5b_2018-UNCOMPRESSED.tif');
+    const gpxFeature = loadGpxData('./test/resources/gpx/Alhambra_Valley_mtb_june_2023-gpsvisualizer.com_dem_applied.gpx');
 
     // iterate over gpx data and collect elevations into arrays
     const gpxElevation: number[] = [];
@@ -27,7 +33,7 @@ describe.only('Integration tests', () => {
     const gpxElevationTotal = calculateElevation(gpxElevation);
     const tiffElevationTotal = calculateElevation(tiffElevation);
 
-    await writeImageFile('./test/out/elevationProfile.png', [ gpxElevation, tiffElevation ], ['gpx', 'tiff']);
+    await writeImageFile('./test/out/elevationProfile.png', [ gpxElevation, tiffElevation ], ['gpx-dem', 'tiff']);
 
     console.log(`gpx:  ${gpxElevationTotal}`);
     console.log(`tiff: ${tiffElevationTotal}`);
