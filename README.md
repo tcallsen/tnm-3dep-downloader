@@ -9,7 +9,7 @@ The goal of this module is to automatically load USGS GeoTIFF data on demand fro
 
 Some stretch goals for #3 may include things like:
 
-- Loading multiple GeoTIFF files from TNM if the bounding box straddles the boundary of 2 or more products
+- Loading multiple GeoTIFF files from TNM if the bounding box straddles the boundary of 2 or more products (e.g. top of Raging River GPX route [falls into another product](./docs/img/example-raging-river-gpx-straddles-multiple-products.png))
 - Ability to load another GeoTIFF product from TNM if selected product does not contain data for lat/long combo
 
 ## Proof of Concept
