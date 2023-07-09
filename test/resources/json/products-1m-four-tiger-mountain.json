@@ -1,0 +1,147 @@
+{
+  "total": 4,
+  "items": [
+    {
+      "title": "USGS 1 Meter 10 x57y526 WA_KingCounty_2021_B21",
+      "moreInfo": "This is a tile of the standard one-meter resolution digital elevation model (DEM) produced through the 3D Elevation Program (3DEP) . The elevations in this DEM represent the topographic bare-earth surface. USGS standard one-meter DEMs are produced exclusively from high resolution light detection and ranging (lidar) source data of one-meter or higher resolution. One-meter DEM surfaces are seamless within collection projects, but, not necessarily seamless across projects. The spatial reference used for tiles of the one-meter DEM within the conterminous United States (CONUS) is Universal Transverse Mercator (UTM) in units of meters, and in conformance with the North American Datum of 1983 (NAD83). All bare earth elevation values are in [...]",
+      "sourceId": "640825d9d34e76f5f75e4201",
+      "sourceName": "ScienceBase",
+      "sourceOriginId": null,
+      "sourceOriginName": "gda",
+      "metaUrl": "https://www.sciencebase.gov/catalog/item/640825d9d34e76f5f75e4201",
+      "vendorMetaUrl": "https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/Elevation/metadata/WA_KingCounty_2021_B21/WA_KingCo_3_2021",
+      "publicationDate": "2023-03-03",
+      "lastUpdated": "2023-03-07T23:12:02.015-07:00",
+      "dateCreated": "2023-03-07T23:06:17.526-07:00",
+      "sizeInBytes": 371504461,
+      "extent": "10000 x 10000 meter",
+      "format": "GeoTIFF",
+      "downloadURL": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/WA_KingCounty_2021_B21/TIFF/USGS_1M_10_x57y526_WA_KingCounty_2021_B21.tif",
+      "downloadURLRaster": null,
+      "previewGraphicURL": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/WA_KingCounty_2021_B21/browse/USGS_1M_10_x57y526_WA_KingCounty_2021_B21.jpg",
+      "downloadLazURL": null,
+      "urls": {
+        "TIFF": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/WA_KingCounty_2021_B21/TIFF/USGS_1M_10_x57y526_WA_KingCounty_2021_B21.tif"
+      },
+      "datasets": [],
+      "boundingBox": {
+        "minX": -122.07231294999997,
+        "maxX": -121.93799882099995,
+        "minY": 47.39855075300005,
+        "maxY": 47.48966848400005
+      },
+      "bestFitIndex": 0,
+      "body": "This is a tile of the standard one-meter resolution digital elevation model (DEM) produced through the 3D Elevation Program (3DEP) . The elevations in this DEM represent the topographic bare-earth surface. USGS standard one-meter DEMs are produced exclusively from high resolution light detection and ranging (lidar) source data of one-meter or higher resolution. One-meter DEM surfaces are seamless within collection projects, but, not necessarily seamless across projects. The spatial reference used for tiles of the one-meter DEM within the conterminous United States (CONUS) is Universal Transverse Mercator (UTM) in units of meters, and in conformance with the North American Datum of 1983 (NAD83). All bare earth elevation values are in meters and are referenced to the North American Vertical Datum of 1988 (NAVD88). Each tile is distributed in the UTM Zone in which it lies. If a tile crosses two UTM zones, it is delivered in both zones. The one-meter DEM is the highest resolution standard DEM offered in the 3DEP product suite. Other 3DEP products are nationally seamless DEMs in resolutions of 1/3, 1, and 2 arc seconds. These seamless DEMs were referred to as the National Elevation Dataset (NED) from about 2000 through 2015 at which time they became the seamless DEM layers under the 3DEP program and lost the NED branding. Other 3DEP products include five-meter DEMs in Alaska as well as various source datasets including the lidar point cloud and interferometric synthetic aperture radar (Ifsar) digital surface models and intensity images. All 3DEP products are public domain.",
+      "processingUrl": "processingUrl",
+      "modificationInfo": "2023-03-08"
+    },
+    {
+      "title": "USGS 1 Meter 10 x57y527 WA_KingCounty_2021_B21",
+      "moreInfo": "This is a tile of the standard one-meter resolution digital elevation model (DEM) produced through the 3D Elevation Program (3DEP) . The elevations in this DEM represent the topographic bare-earth surface. USGS standard one-meter DEMs are produced exclusively from high resolution light detection and ranging (lidar) source data of one-meter or higher resolution. One-meter DEM surfaces are seamless within collection projects, but, not necessarily seamless across projects. The spatial reference used for tiles of the one-meter DEM within the conterminous United States (CONUS) is Universal Transverse Mercator (UTM) in units of meters, and in conformance with the North American Datum of 1983 (NAD83). All bare earth elevation values are in [...]",
+      "sourceId": "640825d9d34e76f5f75e41ff",
+      "sourceName": "ScienceBase",
+      "sourceOriginId": null,
+      "sourceOriginName": "gda",
+      "metaUrl": "https://www.sciencebase.gov/catalog/item/640825d9d34e76f5f75e41ff",
+      "vendorMetaUrl": "https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/Elevation/metadata/WA_KingCounty_2021_B21/WA_KingCo_3_2021",
+      "publicationDate": "2023-03-03",
+      "lastUpdated": "2023-03-07T23:11:54.488-07:00",
+      "dateCreated": "2023-03-07T23:06:17.054-07:00",
+      "sizeInBytes": 376596116,
+      "extent": "10000 x 10000 meter",
+      "format": "GeoTIFF",
+      "downloadURL": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/WA_KingCounty_2021_B21/TIFF/USGS_1M_10_x57y527_WA_KingCounty_2021_B21.tif",
+      "downloadURLRaster": null,
+      "previewGraphicURL": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/WA_KingCounty_2021_B21/browse/USGS_1M_10_x57y527_WA_KingCounty_2021_B21.jpg",
+      "downloadLazURL": null,
+      "urls": {
+        "TIFF": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/WA_KingCounty_2021_B21/TIFF/USGS_1M_10_x57y527_WA_KingCounty_2021_B21.tif"
+      },
+      "datasets": [],
+      "boundingBox": {
+        "minX": -122.07072970299998,
+        "maxX": -121.93618072599998,
+        "minY": 47.48851594200005,
+        "maxY": 47.57963581700005
+      },
+      "bestFitIndex": 0,
+      "body": "This is a tile of the standard one-meter resolution digital elevation model (DEM) produced through the 3D Elevation Program (3DEP) . The elevations in this DEM represent the topographic bare-earth surface. USGS standard one-meter DEMs are produced exclusively from high resolution light detection and ranging (lidar) source data of one-meter or higher resolution. One-meter DEM surfaces are seamless within collection projects, but, not necessarily seamless across projects. The spatial reference used for tiles of the one-meter DEM within the conterminous United States (CONUS) is Universal Transverse Mercator (UTM) in units of meters, and in conformance with the North American Datum of 1983 (NAD83). All bare earth elevation values are in meters and are referenced to the North American Vertical Datum of 1988 (NAVD88). Each tile is distributed in the UTM Zone in which it lies. If a tile crosses two UTM zones, it is delivered in both zones. The one-meter DEM is the highest resolution standard DEM offered in the 3DEP product suite. Other 3DEP products are nationally seamless DEMs in resolutions of 1/3, 1, and 2 arc seconds. These seamless DEMs were referred to as the National Elevation Dataset (NED) from about 2000 through 2015 at which time they became the seamless DEM layers under the 3DEP program and lost the NED branding. Other 3DEP products include five-meter DEMs in Alaska as well as various source datasets including the lidar point cloud and interferometric synthetic aperture radar (Ifsar) digital surface models and intensity images. All 3DEP products are public domain.",
+      "processingUrl": "processingUrl",
+      "modificationInfo": "2023-03-08"
+    },
+    {
+      "title": "USGS 1 Meter 10 x58y526 WA_KingCounty_2021_B21",
+      "moreInfo": "This is a tile of the standard one-meter resolution digital elevation model (DEM) produced through the 3D Elevation Program (3DEP) . The elevations in this DEM represent the topographic bare-earth surface. USGS standard one-meter DEMs are produced exclusively from high resolution light detection and ranging (lidar) source data of one-meter or higher resolution. One-meter DEM surfaces are seamless within collection projects, but, not necessarily seamless across projects. The spatial reference used for tiles of the one-meter DEM within the conterminous United States (CONUS) is Universal Transverse Mercator (UTM) in units of meters, and in conformance with the North American Datum of 1983 (NAD83). All bare earth elevation values are in [...]",
+      "sourceId": "640825d5d34e76f5f75e41f1",
+      "sourceName": "ScienceBase",
+      "sourceOriginId": null,
+      "sourceOriginName": "gda",
+      "metaUrl": "https://www.sciencebase.gov/catalog/item/640825d5d34e76f5f75e41f1",
+      "vendorMetaUrl": "https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/Elevation/metadata/WA_KingCounty_2021_B21/WA_KingCo_3_2021",
+      "publicationDate": "2023-03-03",
+      "lastUpdated": "2023-03-07T23:11:51.118-07:00",
+      "dateCreated": "2023-03-07T23:06:13.950-07:00",
+      "sizeInBytes": 349424085,
+      "extent": "10000 x 10000 meter",
+      "format": "GeoTIFF",
+      "downloadURL": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/WA_KingCounty_2021_B21/TIFF/USGS_1M_10_x58y526_WA_KingCounty_2021_B21.tif",
+      "downloadURLRaster": null,
+      "previewGraphicURL": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/WA_KingCounty_2021_B21/browse/USGS_1M_10_x58y526_WA_KingCounty_2021_B21.jpg",
+      "downloadLazURL": null,
+      "urls": {
+        "TIFF": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/WA_KingCounty_2021_B21/TIFF/USGS_1M_10_x58y526_WA_KingCounty_2021_B21.tif"
+      },
+      "datasets": [],
+      "boundingBox": {
+        "minX": -121.93980811099999,
+        "maxX": -121.80527674399997,
+        "minY": 47.39724869400004,
+        "maxY": 47.48851594200005
+      },
+      "bestFitIndex": 0,
+      "body": "This is a tile of the standard one-meter resolution digital elevation model (DEM) produced through the 3D Elevation Program (3DEP) . The elevations in this DEM represent the topographic bare-earth surface. USGS standard one-meter DEMs are produced exclusively from high resolution light detection and ranging (lidar) source data of one-meter or higher resolution. One-meter DEM surfaces are seamless within collection projects, but, not necessarily seamless across projects. The spatial reference used for tiles of the one-meter DEM within the conterminous United States (CONUS) is Universal Transverse Mercator (UTM) in units of meters, and in conformance with the North American Datum of 1983 (NAD83). All bare earth elevation values are in meters and are referenced to the North American Vertical Datum of 1988 (NAVD88). Each tile is distributed in the UTM Zone in which it lies. If a tile crosses two UTM zones, it is delivered in both zones. The one-meter DEM is the highest resolution standard DEM offered in the 3DEP product suite. Other 3DEP products are nationally seamless DEMs in resolutions of 1/3, 1, and 2 arc seconds. These seamless DEMs were referred to as the National Elevation Dataset (NED) from about 2000 through 2015 at which time they became the seamless DEM layers under the 3DEP program and lost the NED branding. Other 3DEP products include five-meter DEMs in Alaska as well as various source datasets including the lidar point cloud and interferometric synthetic aperture radar (Ifsar) digital surface models and intensity images. All 3DEP products are public domain.",
+      "processingUrl": "processingUrl",
+      "modificationInfo": "2023-03-08"
+    },
+    {
+      "title": "USGS 1 Meter 10 x58y527 WA_KingCounty_2021_B21",
+      "moreInfo": "This is a tile of the standard one-meter resolution digital elevation model (DEM) produced through the 3D Elevation Program (3DEP) . The elevations in this DEM represent the topographic bare-earth surface. USGS standard one-meter DEMs are produced exclusively from high resolution light detection and ranging (lidar) source data of one-meter or higher resolution. One-meter DEM surfaces are seamless within collection projects, but, not necessarily seamless across projects. The spatial reference used for tiles of the one-meter DEM within the conterminous United States (CONUS) is Universal Transverse Mercator (UTM) in units of meters, and in conformance with the North American Datum of 1983 (NAD83). All bare earth elevation values are in [...]",
+      "sourceId": "640825d5d34e76f5f75e41ef",
+      "sourceName": "ScienceBase",
+      "sourceOriginId": null,
+      "sourceOriginName": "gda",
+      "metaUrl": "https://www.sciencebase.gov/catalog/item/640825d5d34e76f5f75e41ef",
+      "vendorMetaUrl": "https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/Elevation/metadata/WA_KingCounty_2021_B21/WA_KingCo_3_2021",
+      "publicationDate": "2023-03-03",
+      "lastUpdated": "2023-03-07T23:11:47.787-07:00",
+      "dateCreated": "2023-03-07T23:06:13.460-07:00",
+      "sizeInBytes": 369713140,
+      "extent": "10000 x 10000 meter",
+      "format": "GeoTIFF",
+      "downloadURL": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/WA_KingCounty_2021_B21/TIFF/USGS_1M_10_x58y527_WA_KingCounty_2021_B21.tif",
+      "downloadURLRaster": null,
+      "previewGraphicURL": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/WA_KingCounty_2021_B21/browse/USGS_1M_10_x58y527_WA_KingCounty_2021_B21.jpg",
+      "downloadLazURL": null,
+      "urls": {
+        "TIFF": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/WA_KingCounty_2021_B21/TIFF/USGS_1M_10_x58y527_WA_KingCounty_2021_B21.tif"
+      },
+      "datasets": [],
+      "boundingBox": {
+        "minX": -121.93799882099995,
+        "maxX": -121.80323155899998,
+        "minY": 47.48720980000007,
+        "maxY": 47.57847965900004
+      },
+      "bestFitIndex": 0,
+      "body": "This is a tile of the standard one-meter resolution digital elevation model (DEM) produced through the 3D Elevation Program (3DEP) . The elevations in this DEM represent the topographic bare-earth surface. USGS standard one-meter DEMs are produced exclusively from high resolution light detection and ranging (lidar) source data of one-meter or higher resolution. One-meter DEM surfaces are seamless within collection projects, but, not necessarily seamless across projects. The spatial reference used for tiles of the one-meter DEM within the conterminous United States (CONUS) is Universal Transverse Mercator (UTM) in units of meters, and in conformance with the North American Datum of 1983 (NAD83). All bare earth elevation values are in meters and are referenced to the North American Vertical Datum of 1988 (NAVD88). Each tile is distributed in the UTM Zone in which it lies. If a tile crosses two UTM zones, it is delivered in both zones. The one-meter DEM is the highest resolution standard DEM offered in the 3DEP product suite. Other 3DEP products are nationally seamless DEMs in resolutions of 1/3, 1, and 2 arc seconds. These seamless DEMs were referred to as the National Elevation Dataset (NED) from about 2000 through 2015 at which time they became the seamless DEM layers under the 3DEP program and lost the NED branding. Other 3DEP products include five-meter DEMs in Alaska as well as various source datasets including the lidar point cloud and interferometric synthetic aperture radar (Ifsar) digital surface models and intensity images. All 3DEP products are public domain.",
+      "processingUrl": "processingUrl",
+      "modificationInfo": "2023-03-08"
+    }
+  ],
+  "errors": [],
+  "messages": [
+    "Retrieved 4 item(s) Retrieved (1 through 50)"
+  ],
+  "sciencebaseQuery": "https://www.sciencebase.gov/catalog/items?filter=tagslq%3Dtags.scheme%3A%22The+National+Map+Collection+Thesaurus%22+AND+%28tags.name%3A+%22Digital+Elevation+Model+%28DEM%29+1+meter%22%29&filter=tagslq%3Dtags.scheme%3A%22The+National+Map+Product+Format+Thesaurus%22+AND+%28tags.name%3A+%22GeoTIFF%22%29&filter=spatialQuery%3D%7B%22wkt%22%3A%22POLYGON%28%28-121.95974647998105+47.49559703288901%2C-121.9131524860789+47.49559703288901%2C-121.9131524860789+47.46768133423269%2C-121.95974647998105+47.46768133423269%2C+-121.95974647998105+47.49559703288901%29%29%22%2C%22relation%22%3A%22intersects%22%7D&max=50&offset=0&fields=id%2Ctitle%2Csummary%2Cbody%2Ctags%2CwebLinks%2Cdates%2Cspatial%2Cidentifiers&format=json&sort=title&order=asc",
+  "filteredOut": 0
+}

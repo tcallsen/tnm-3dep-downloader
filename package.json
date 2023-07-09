@@ -29,6 +29,9 @@
   },
   "dependencies": {
     "@tmcw/togeojson": "^5.6.2",
+    "@turf/boolean-contains": "^6.5.0",
+    "@turf/envelope": "^6.5.0",
+    "@turf/helpers": "^6.5.0",
     "geotiff": "^2.0.7",
     "geotiff-geokeys-to-proj4": "^2022.9.7",
     "node-fetch": "^2.6.11",
