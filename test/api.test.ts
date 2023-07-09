@@ -15,29 +15,6 @@ describe('The National Map interation', () => {
     expect(products.length).toBe(0);
   });
 
-  // TODO: deprecate/remove?
-  it('filterProducts with defaultResolutionStrategy', async () => {
-    const boundingBox = 'POLYGON((-122.674011196934 38.0220728663461,-122.52459715119774 38.0220728663461,-122.52459715119774 37.93374140015236,-122.674011196934 37.93374140015236, -122.674011196934 38.0220728663461))';
-    const products = await getProducts(boundingBox);
-    expect(products.length).toBeGreaterThan(2);
-
-    // filter with default resolution strategy, which will return product with the largest sizeInBytes
-    const productsMaxSizeInBytes = Math.max(...products.map(o => o.sizeInBytes), 0);
-    const filteredProduct = filterProducts(products);
-    expect(filteredProduct.sizeInBytes).toBe(productsMaxSizeInBytes);
-  });
-
-  // TODO: deprecate/remove?
-  it('filterProducts with custom defaultResolutionStrategy', async () => {
-    const products: Product[] = JSON.parse(fs.readFileSync('./test/resources/json/products-two-results.json', 'utf8'));
-
-    // filter with custom resolution strategy, which will return product with the sourceName 'ScienceBaseB'
-    const filteredProduct = filterProducts(products, (products: Product[]): Product => {
-      return products.filter((product: Product) => product.sourceName === 'ScienceBaseB')[0];
-    });
-    expect(filteredProduct.sourceName).toBe('ScienceBaseB');
-  });
-
   it('sortProducts - filesize descending, default SortingStrategy', async () => {
     // mock api response
     const response = JSON.parse(fs.readFileSync('./test/resources/json/products-1m-four-tiger-mountain.json', 'utf8'));

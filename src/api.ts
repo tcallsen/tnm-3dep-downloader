@@ -84,11 +84,6 @@ export async function getProducts(wktPolygon: string): Promise<Product[]> {
   return [];
 }
 
-// TODO: deprecate/remove?
-export function filterProducts(products: Product[], resolutionStrategy: ResolutionStrategy = defaultResolutionStrategy): Product {
-  return resolutionStrategy(products);
-}
-
 function convertWktToApiFormat(wktPolygon: string): string {
   return wktPolygon.replace('POLYGON', '').replace(/\(/g, '').replace(/\)/g, '');
 }
@@ -103,12 +98,6 @@ export function getWktFromPolygon(polygon: Feature<Polygon>): string {
 export function getPolygonFromBoundingBox(boundingBox: ProductBoundingBox): Feature<Polygon> {
   return polygon([[[boundingBox.minX, boundingBox.maxY], [boundingBox.maxX, boundingBox.maxY], [boundingBox.maxX, boundingBox.minY], [boundingBox.minX, boundingBox.minY], [boundingBox.minX, boundingBox.maxY]]]);
 }
-
-const defaultResolutionStrategy: ResolutionStrategy = function(products: Product[]) {
-  return products.reduce(function(prev, current) {
-    return (prev.sizeInBytes > current.sizeInBytes) ? prev : current;
-  });
-};
 
 export function sortProducts(products: Product[], sortingStrategy: SortingStrategy = defaultSortingStrategy): Product[] {
   const productsClone = [ ...products ];
